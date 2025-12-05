@@ -1,0 +1,201 @@
+:root {
+    --bg-color: #1a1a1a;        /* Fondo oscuro */
+    --text-color: #bcff02;      /* Texto verde brillante (como terminal) */
+    --accent-color: #008800;    /* Color de acento/borde */
+    --window-bg: #2d2d2d;       /* Fondo de las ventanas de terminal */
+    --font-mono: 'Fira Code', 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    padding-top: 60px; /* Espacio para la barra de navegación fija */
+}
+
+/* ----------------------------------- */
+/* 2. Navegación (Estilo Limpio - Link 2) */
+/* ----------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 50px;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 15px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: white; /* Resaltado al pasar el ratón */
+    border-bottom: 2px solid white;
+}
+
+/* ----------------------------------- */
+/* 3. Estilo de Ventana de Terminal  (Link 1) */
+/* ----------------------------------- */
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.terminal-window {
+    background-color: var(--window-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    margin-bottom: 60px;
+    padding: 20px;
+    scroll-margin-top: 80px; /* Para el desplazamiento suave */
+}
+
+.section-title {
+    color: var(--text-color);
+    border-bottom: 2px dotted var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.terminal-content p, .terminal-content ul {
+    margin-bottom: 10px;
+}
+
+.terminal-content a {
+    color: rgb(255, 255, 255); /* Enlaces en amarillo para contraste */
+    text-decoration: none;
+}
+
+.terminal-content p{
+    color: rgb(255, 255, 255); /* Enlaces en amarillo para contraste */
+    text-decoration: none;
+}
+
+.terminal-content LI {
+    font-size: 23PX;
+}
+
+.t{
+
+    color: rgb(255, 255, 255);
+}
+
+
+.terminal-content a:hover {
+    text-decoration: underline;
+}
+
+.terminal-content img {
+    width: clamp(120px,22vw,200px);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 30%;
+    
+   
+    margin-bottom: 10px;
+   
+    
+    transition: transform 0.4s ease;
+    will-change: transform;
+    cursor: pointer;
+}
+
+/* Estilo del prompt y el cursor */
+.prompt-prefix {
+    color: orange; /* Prefijo en otro color para diferenciar */
+    margin-right: 5px;
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.each{
+    display: flex;
+    gap: 8px;
+    
+    padding: 5px;
+    border-radius: 10px;
+    
+    color: #ffffff;
+}
+
+.each img{
+    width: 20px;
+    height: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* color del botón */
+    color: white; /* color del texto */
+    text-decoration: none; /* quitar subrayado */
+    border-radius: 5px; /* bordes redondeados */
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #45a049; /* efecto al pasar el mouse */
+}
+
+
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ----------------------------------- */
+/* 4. Estilos de Lista y Resaltado     */
+/* ----------------------------------- */
+ul {
+    list-style-type: ' $ '; /* Pequeño truco para listas estilo terminal */
+    padding-left: 20px;
+}
+
+.prompt-output {
+    color: #ccc; /* La salida del comando puede ser un poco más tenue */
+    font-style: italic;
+}
+
+/* ----------------------------------- */
+/* 5. Responsive (Básico)              */
+/* ----------------------------------- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+    .container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+}

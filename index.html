@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Terminal Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about">ACERCA DE</a>
+        <a href="#skills">HABILIDADES</a>
+        <a href="#projects">PROYECTOS</a>
+        <a href="#contact">CONTACTO</a>
+    </header>
+
+    <main class="container">
+        
+        <section id="home" class="terminal-window">
+            <div class="terminal-content">
+                <p class="prompt-output">
+                    Iniciando Sistema... Conexión Establecida.
+                </p>
+                <div class="prompt-line">
+                    <span class="prompt-prefix">user@portafolio:~$</span> 
+                    <span id="typing-text"></span>
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="terminal-window">
+            <h2 class="section-title">Acerca de Mí</h2>
+            <div class="terminal-content">
+                <p class="prompt-output">(user@portafolio:~$ cat profile.txt)</p>
+                <img src="assets/WhatsApp Image 2025-07-16 at 9.20.02 AM (1).jpg" alt= "foto de perfil">
+                <p>Hola, soy Diego Diaz, Gran entusiasta del aprendizaje continuo y la resolución de problemas. Me motiva construir, mejorar y aportar valor en cada proyecto. Disfruto enfrentar nuevos desafíos, 
+                    trabajar en equipo y encontrar formas creativas de transformar ideas en soluciones reales.</p>
+                </div>
+        </section>
+
+        <section id="skills" class="terminal-window">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="terminal-content">
+                <p class="prompt-output">(user@portafolio:~$ ls -l /tech/)</p>
+                <h2>FRONTEND</h2>
+                <div class="each">
+                    <img src="assets/js_5968292.png" alt="">
+                    <p>Javascrpit  Creo interactividad y dinamismo en las páginas web para que los usuarios tengan una experiencia más fluida.</p>
+                </div>
+                 <div class="each">
+                    <img src="assets/html-5_732212.png" alt="">
+                    <p>HTML5 Estructuro el contenido de los sitios web de manera clara y semántica.</p>
+                </div>
+                <div class="each">
+                    <img src="assets/css-3_732190.png" alt="">
+                    <p>CSS Diseño estilos visuales atractivos y adaptables para interfaces modernas y responsivas.</p>
+                </div>
+                <h2>BACKEND</h2>
+                 <div class="each">
+                    <img src="assets/java_226777.png" alt="">
+                    <p>Java Programo la lógica y funcionalidades de mis aplicaciones de manera eficiente y escalable.</p>
+                </div>
+                <div class="each">
+                    <img src="assets/images.png" alt="">
+                    <p>Springboot Construyo aplicaciones web robustas, gestionando servicios y conectando el back-end con bases de datos.</p>
+                </div>
+                <h2>BASES DE DATOS</h2>
+               <div class="each">
+                    <img src="assets/mysql_919836.png" alt="">
+                    <p>Mysql Organizo y gestiono datos para que la información sea accesible y segura.</p>
+                </div>
+                <div class="each">
+                    <img src="assets/github_733609.png" alt="">
+                    <p>GITHUB Mantengo el control de versiones y colaboro de manera eficiente en mis proyectos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="terminal-window">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="terminal-content">
+                <p class="prompt-output">(user@portafolio:~$ cat projects-list.md)</p>
+                <h3>Sistema api Colombia</h3>
+                <p class="t">un sistema web que consume la API de Colombia para consultar información sobre países, presidentes
+                     y otros datos relevantes, utilizando HTML, CSS y JavaScript para ofrecer una interfaz interactiva y fácil de usar."</p>
+                     <a href="https://diegodiaz0827.github.io/Sistema-api-colombia/Sistema/" class="btn">Probar</a>
+                     <h3>Sistema de operaciones Bancarias</h3> 
+                <p> Este proyecto es una simulación de un sistema bancario en entorno web. Permite a los usuarios registrarse, 
+                    iniciar sesión, realizar transacciones financieras y consultar extractos mensuales.</p>
+                <a href="https://sistema-de-operaciones-bancarias.vercel.app/" class="btn">Probar</a>
+            </div>
+        </section>
+
+        <section id="contact" class="terminal-window">
+            <h2 class="section-title">Contacto</h2>
+            <div class="terminal-content">tucorreo@ejemplo.com
+                <p class="prompt-output">(user@portafolio:~$ send-mail)</p>
+                <p>Email: <a href="mailto:dieguito2456@gmail.com?subject=Oportunidad%20para%20Programador%20de%20Software%20-%20Diego%20Diaz&body=Hola,%20vi%20tu%20hoja%20de%20vida%20y%20me%20gustar%C3%ADa%20saber%20algo%20m%C3%A1s%20sobre%20tu%20experiencia%20y%20disponibilidad%20para%20vacantes%
+                    20como%20Programador%20de%20Software.%20%C2%BFPodemos%20agendar%20una%20breve%20llamada?">dieguitonet2456@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/DiegoDiaz0827">/dev/github/</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
